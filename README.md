@@ -1,2 +1,2 @@
 # code
-Contains all the practise code !! 
+Contains all the practice code !! 
