@@ -1,14 +1,17 @@
-class TooyoungException(Exception):
-    def __init__ (self, arg):
-        self.msg = arg
-class ToooldException(Exception):
-    def __init__(self, arg):
-        self.msg = arg
+f = open("file1.txt", 'w')
+r1 = f.read()
+d1 = f.write("today is friday")
 
-age = int(input("Enter the age: "))
-if age > 334343: 
-    raise TooyoungException("rehne de bhai")
-elif age < 23:
-    raise ToooldException("You are not eligible")
-else:
-    print("you are not eligible to marry")
+
+g = open("file2.txt", 'w')
+r2 = f.read()
+d2 = g.write("today is not friday and this is file 2")
+
+
+f.close()
+g.close()
+
+## merging a new file 
+h = open("file3.txt", 'a')
+
+

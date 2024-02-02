@@ -8,21 +8,32 @@ public class permutation {
 
     public static void solve(int[] arr, int num, int num1){
         if(num == num1){
-            return;
+            print(arr);
         }
         else{
             // first swap and then backtrack .
-            swap(arr, num, num1);
-            solve(arr, num + 1, num1);
+            for(int i = 0; i < arr.length; i++){
+                swap(arr, num, num1);
+                solve(arr, num + 1, num1);
+                
+                // Backtracking to the previous node !
+                swap(arr, num, num1);
+            }
+        }
+    }
 
-            // Backtracking to the previous node !
-            swap(arr, num, num1);
+    public static void print(int[] arr){
+        for(int i = 0; i < arr.length; i++){
+            System.out.println(arr[i] + " ");
         }
     }
     public static void main(String[] args) {
         
         int[] arr = {1, 2, 4 , 5 , 7};
+        int start = arr[0];
+        int end = arr[arr.length - 1];
+
+        solve(arr, start, end);
         
-        solve(arr, )
     }
 }
