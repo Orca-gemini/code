@@ -12,28 +12,26 @@ public class permutation {
         }
         else{
             // first swap and then backtrack .
-            for(int i = 0; i < arr.length; i++){
-                swap(arr, num, num1);
+            for(int i = num; i <= num1; i++){
+                swap(arr, num, i);
                 solve(arr, num + 1, num1);
-                
+
                 // Backtracking to the previous node !
-                swap(arr, num, num1);
+                swap(arr, num, i);
             }
         }
     }
 
     public static void print(int[] arr){
         for(int i = 0; i < arr.length; i++){
-            System.out.println(arr[i] + " ");
+            System.out.print(arr[i] + " ");
         }
+        System.out.println();
     }
     public static void main(String[] args) {
         
-        int[] arr = {1, 2, 4 , 5 , 7};
-        int start = arr[0];
-        int end = arr[arr.length - 1];
-
-        solve(arr, start, end);
+        int[] arr = {1, 2, 3};
+        solve(arr, 0, arr.length - 1);
         
     }
 }
