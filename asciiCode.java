@@ -14,5 +14,9 @@ public class asciiCode {
             System.out.println((char)arr[i] + " - " + arr[i]);
             result[i] = (char)arr[i];
         }
+
+         /* 
+          * 18 - 
+          */
     }
 }

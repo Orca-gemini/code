@@ -18,7 +18,7 @@ public class permutation {
 
                 // Backtracking to the previous node !
                 swap(arr, num, i);
-            }
+            }   
         }
     }
 
