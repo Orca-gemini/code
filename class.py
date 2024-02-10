@@ -1,15 +1,28 @@
-class Student:
-    def __init__(self, name, phy, chem, bio):
-        self.name = name
-        self.phy = phy
-        self.chem = chem
-        self.bio = bio 
-    
-    def totalObtained(self):
-        result = (self.phy + self.chem + self.bio) 
-        return result
+class Dog:
+    species : str = "Canines"
+    def __init__(this, name, color, height, age, breed):
+        this.name : str = "A"
+        this.age : int = 3
+        this.breed : str = "Gs"
+        this.color : str = "white"
+        this.height : float = 34.5
+        this.sp: list = [] 
+        this.isStray : bool = True
         
-St = Student("Yash", 25,26,28)
-St2 = Student("Djdj", 45,56,43)
-print(St2.totalObtained())
-print(St.totalObtained())
+    def birthday(this):
+        this.age += 1
+        print("Age is: ", this.age)
+    
+    def height(this, height):
+        print("Height: ", + this.height)
+        
+    def change_Activity(this, activity):
+        this.sp.append("activity")
+
+d1 = Dog("D", 3, "ds", "white", "Sd", True)
+print(d1.species)
+d1.sp = ["bark", "eat", "slee"]
+print(d1.sp)
+
+d1.change_Activity("Diving")
+print(d1.sp)
