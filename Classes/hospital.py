@@ -28,7 +28,11 @@ class LabTestRepository:
     __list_of_lab_test_charge=[2020,1750.50,5700,1320.50]
     @staticmethod
     def get_test_charge(lab_test_id):
-        pass
+        for i in lab_test_id:
+            if i in Patient.get_list_of_lab_test_ids:
+                return Patient.calculate_lab_test_charge 
+            else:
+                return -1
 	    #Remove pass and write the logic here.
 
 lab_test_list1=["L101","L103","L104",'L105']
